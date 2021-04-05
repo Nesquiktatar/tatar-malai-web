@@ -1,29 +1,27 @@
 import React from 'react';
 import * as s from './UserPosts.styles';
 import Post from './Post';
-import {Field, reduxForm} from 'redux-form';
-import {Textarea} from '../../../common/FormsControls/FormsControls';
+import {reduxForm} from 'redux-form';
+import {buildField, Textarea} from '../../../common/FormsControls/FormsControls';
+import Button from "../../../common/Button/Button";
 
 
 const AddPostForm = (props) => {
 
 
-    return(
-        <s.AddPostForm>
+    return (
+        <div>
             <form onSubmit={props.handleSubmit}>
-                <div>
-                    <Field placeholder={'enter your post'} name={'addPostForm'}
-                            component={Textarea} cols="110" rows="5" validate={[]}/>
-                </div>
-                <div>
-                    <button>Add post</button>
-                </div>
+                {buildField('enter your post', 'addPostForm', [], Textarea)}
+                <s.Button>
+                    <Button btnText='ADD'/>
+                </s.Button>
             </form>
-        </s.AddPostForm>
+        </div>
     )
 }
 
-const AddPostReduxForm = reduxForm ({form: 'ProfileAddPostForm'})(AddPostForm)
+const AddPostReduxForm = reduxForm({form: 'ProfileAddPostForm'})(AddPostForm)
 
 const UserPosts = (props) => {
 

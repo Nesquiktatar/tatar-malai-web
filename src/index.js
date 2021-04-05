@@ -28,3 +28,6 @@ store.subscribe(() => {
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
+//https://codepen.io/jackrugile/pen/aCzHs - beautiful thing
+//https://codepen.io/davidicus/details/emgQKJ - hover on buttons
+

@@ -17,15 +17,17 @@ const ProfileDataForm = ({handleSubmit, profile, error}) => {
             <label htmlFor="save">
                 <div className={s.wrapper}>
                     <div className={s.fullName}>
-                        <b>Full name</b>: {buildField('Full name', 'fullName', [], Input)}
+                        {buildField('Full name', 'fullName', [], Input)}
                     </div>
                     <div className={s.lookingForJob}>
                         <b>Looking for a job</b>:
-                        {buildField('', 'lookingForAJob', [], Input, {type: 'checkbox'})}
+                            {buildField('', 'lookingForAJob', [], Input, {type: 'checkbox'})}
                     </div>
                     <div className={s.skills}>
                         <b>My professional skills</b>:
-                        {buildField('My professional skills', 'lookingForAJobDescription', [], Textarea)}
+                        <div>
+                            {buildField('My professional skills', 'lookingForAJobDescription', [], Textarea)}
+                        </div>
                     </div>
                     <div className={s.aboutMe}>
                         <b>About me</b>:
@@ -34,8 +36,8 @@ const ProfileDataForm = ({handleSubmit, profile, error}) => {
                     <div className={s.contacts}>
                         {Object.keys(profile.contacts).map(key => {
                             return (
-                                <div key={key}>
-                                    <b>{key}: {buildField(key, 'contacts.' + key, [], Input)}</b>
+                                <div className={s.contactsInside2} key={key}>
+                                    <b>{key}:</b> {buildField(key, 'contacts.' + key, [], Input)}
                                 </div>
                             )
                         })}

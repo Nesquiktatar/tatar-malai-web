@@ -7,6 +7,7 @@ import {Redirect} from 'react-router-dom';
 import {reduxForm} from 'redux-form';
 import {buildField, Input} from '../../common/FormsControls/FormsControls';
 import {maxLengthCreator, required} from '../../../utils/validators/validators';
+import Button from "../../common/Button/Button";
 
 const maxLength50 = maxLengthCreator(50);
 
@@ -17,7 +18,7 @@ const MessageInputForm = (props) => {
             <form onSubmit={props.handleSubmit}>
                 {buildField('Your message', 'MsgBody', [required, maxLength50], Input)}
                 <div>
-                    <button>SEND</button>
+                    <Button btnText='SEND'/>
                 </div>
 
             </form>
@@ -30,8 +31,7 @@ const MessageInputReduxForm = reduxForm({form: 'dialogsAddMsgForm'})(MessageInpu
 const Dialogs = React.memo(({sendMessage, dialogsPage, isAuth,}) => {
 
     let MessagesDataElementsLeft = dialogsPage.messagesDataIncoming.map(m => <LeftBox message={m.message} key={m.id}/>)
-    let MessagesDataElementsRight = dialogsPage.messagesDataOutgoing.map(m => <RightBox message={m.message}
-                                                                                        key={m.id}/>)
+    let MessagesDataElementsRight = dialogsPage.messagesDataOutgoing.map(m => <RightBox message={m.message} key={m.id}/>)
     let addNewMessage = (values) => {
         sendMessage(values.MsgBody);
     }
