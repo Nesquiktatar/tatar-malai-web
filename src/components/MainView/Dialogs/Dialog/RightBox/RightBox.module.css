@@ -1,0 +1,64 @@
+.container {
+    clear: both;
+    position: relative;
+    grid-column-start: 2;
+    grid-auto-flow: row;
+    padding-top: 10px;
+}
+
+.container .arrow {
+    width: 12px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    float: right;
+    top: 6px;
+    right: 32px;
+}
+
+.container .arrow .outer {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #000000;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+.container .arrow .inner {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #8fc0a9;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    right: 2px;
+
+}
+
+.container .messageBody {
+    background-color: #8fc0a9;
+    float: right;
+    width: 90%;
+    height: auto;
+    border: 1px solid #000000;
+    padding: 6px 8px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 32px;
+}
+
+.container .messageBody p {
+    margin: 0;
+}
+
+
+
+
+

@@ -1,0 +1,92 @@
+.container {
+    padding-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas:
+            'photo description'
+            'status description'
+}
+
+.photo img{
+    grid-area: photo;
+    background-color: #8fc0a9;
+    border-radius: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: content-box;
+}
+
+
+.status{
+    padding: 2% 4%;
+    grid-area: status;
+    color: white;
+    background-color: green;
+}
+
+.imgDownload,
+.saveButton,
+.editButton{
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.description{
+    grid-area: description;
+    background-color: blue;
+}
+
+.wrapper{
+    text-align: center;
+    background-color: aqua;
+    padding: 1% 1%;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-areas:
+        'fullName  contacts'
+        'lookingForJob contacts'
+        'skills contacts'
+        'aboutMe contacts'
+;
+}
+.formSummaryError{
+
+}
+
+.fullName {
+    border: 2px solid black;
+    grid-area: fullName;
+    text-align: center;
+}
+
+.lookingForJob{
+    border: 2px solid black;
+    grid-area: lookingForJob
+}
+
+.skills{
+    border: 2px solid black;
+    grid-area: skills;
+}
+
+.aboutMe{
+    border: 2px solid black;
+    grid-area: aboutMe;
+}
+
+.contacts{
+    border: 2px solid black;
+    grid-area: contacts;
+
+}
+
+.contactsInside{
+    display: inline-block;
+}
+
+.facebook{
+    color: red;
+    border: 2px solid black;
+}
