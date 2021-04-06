@@ -4,7 +4,6 @@ export const Profile = styled.div`
     background-color: rgba(44, 31, 23, 0.8);
     display: grid;
     grid-template-columns:10% 80% 10%;
-    grid-template-rows: 45% 50%;
     
 `;
 

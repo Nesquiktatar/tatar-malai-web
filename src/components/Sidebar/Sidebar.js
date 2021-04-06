@@ -73,9 +73,7 @@ const Sidebar = (props) => {
                 newSubmenus[index]['isSelected'] = null;
             }
         })
-
         setSubmenus(newSubmenus);
-
     }, [props.sidebarPage.menuItems])
 
     const handleMenuItemClick = (name, index) => {
@@ -126,9 +124,7 @@ const Sidebar = (props) => {
 
         //box of item
         return (
-            <s.ItemContainer key={index}
-
-            >
+            <s.ItemContainer key={index}>
                 <Link to={item.to} style={{textDecoration: 'none'}}>
                     <s.MenuItem
                         font={props.sidebarPage.fonts.menu}

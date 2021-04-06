@@ -5,13 +5,14 @@ import {NavLink} from "react-router-dom";
 
 const DialogsNavEl = (props) => {
     return (
-        <s.DialogsNavEl>
-            <img src={userPhoto} alt="userPhoto"/>
-            <s.DialogsNavElName>
-                <NavLink to={'/dialogs/' + props.id}>{props.name}</NavLink>
-            </s.DialogsNavElName>
+        <s.DialogsNavEl selected={props.selected} id={props.id} onClick={() => {props.changeDialog(props.id)}}>
+            <NavLink to={'/dialogs/' + props.id}>
+                <div>
+                    <img src={userPhoto} alt="userPhoto"/>
+                    {props.name}
+                </div>
+            </NavLink>
         </s.DialogsNavEl>
     )
 }
-
 export default DialogsNavEl;
